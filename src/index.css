@@ -2,82 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Bio Link Page Design System - Warm, earthy, elegant */
+/* Bio Link Page Design System - Clean, modern, unified typography */
 
 @layer base {
   :root {
-    --background: 40 30% 95%;
-    --foreground: 80 15% 25%;
+    --background: 45 25% 96%;
+    --foreground: 30 10% 20%;
 
-    --card: 40 25% 97%;
-    --card-foreground: 80 15% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 20%;
 
-    --popover: 40 25% 97%;
-    --popover-foreground: 80 15% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 20%;
 
-    --primary: 80 25% 35%;
-    --primary-foreground: 40 30% 95%;
+    --primary: 75 30% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 20% 90%;
-    --secondary-foreground: 80 15% 25%;
+    --secondary: 45 20% 92%;
+    --secondary-foreground: 30 10% 25%;
 
-    --muted: 40 15% 88%;
-    --muted-foreground: 80 10% 45%;
+    --muted: 45 15% 90%;
+    --muted-foreground: 30 8% 50%;
 
-    --accent: 80 20% 45%;
-    --accent-foreground: 40 30% 95%;
+    --accent: 75 25% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 80 15% 70%;
-    --input: 80 15% 70%;
-    --ring: 80 25% 35%;
+    --border: 45 15% 82%;
+    --input: 45 15% 82%;
+    --ring: 75 30% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     /* Custom tokens */
-    --link-bg: 40 25% 97%;
-    --link-border: 80 15% 70%;
-    --link-hover-bg: 80 20% 92%;
-    --avatar-border: 80 25% 60%;
-    --icon-color: 80 15% 40%;
-
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --link-bg: 0 0% 100%;
+    --link-border: 45 15% 85%;
+    --link-hover-bg: 75 20% 95%;
+    --link-hover-border: 75 25% 65%;
+    --avatar-glow: 75 30% 70%;
+    --icon-bg: 75 25% 92%;
+    --icon-color: 75 30% 35%;
+    --icon-hover-bg: 75 30% 40%;
   }
 
   .dark {
-    --background: 80 15% 10%;
-    --foreground: 40 30% 95%;
+    --background: 30 10% 8%;
+    --foreground: 45 25% 95%;
 
-    --card: 80 15% 12%;
-    --card-foreground: 40 30% 95%;
+    --card: 30 10% 12%;
+    --card-foreground: 45 25% 95%;
 
-    --popover: 80 15% 12%;
-    --popover-foreground: 40 30% 95%;
+    --popover: 30 10% 12%;
+    --popover-foreground: 45 25% 95%;
 
-    --primary: 80 25% 60%;
-    --primary-foreground: 80 15% 10%;
+    --primary: 75 30% 55%;
+    --primary-foreground: 30 10% 8%;
 
-    --secondary: 80 15% 18%;
-    --secondary-foreground: 40 30% 95%;
+    --secondary: 30 10% 15%;
+    --secondary-foreground: 45 25% 95%;
 
-    --muted: 80 15% 20%;
-    --muted-foreground: 40 20% 65%;
+    --muted: 30 10% 18%;
+    --muted-foreground: 45 15% 60%;
 
-    --accent: 80 20% 50%;
-    --accent-foreground: 80 15% 10%;
+    --accent: 75 25% 50%;
+    --accent-foreground: 30 10% 8%;
 
-    --border: 80 15% 25%;
-    --input: 80 15% 25%;
-    --ring: 80 25% 60%;
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 75 30% 55%;
 
-    --link-bg: 80 15% 15%;
-    --link-border: 80 15% 30%;
-    --link-hover-bg: 80 15% 20%;
-    --avatar-border: 80 25% 50%;
-    --icon-color: 80 15% 60%;
+    --link-bg: 30 10% 14%;
+    --link-border: 30 10% 25%;
+    --link-hover-bg: 75 15% 20%;
+    --link-hover-border: 75 25% 45%;
+    --avatar-glow: 75 25% 40%;
+    --icon-bg: 30 10% 18%;
+    --icon-color: 75 30% 60%;
+    --icon-hover-bg: 75 30% 50%;
   }
 }
 
@@ -87,48 +90,67 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body antialiased;
-    font-family: var(--font-body);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
   }
 }
 
 @layer components {
+  .avatar-container {
+    @apply relative;
+  }
+
+  .avatar-glow {
+    @apply absolute inset-0 rounded-full opacity-60 blur-xl;
+    background: hsl(var(--avatar-glow));
+  }
+
   .avatar-ring {
-    @apply rounded-full p-1;
-    background: linear-gradient(135deg, hsl(var(--avatar-border)), hsl(var(--primary)));
+    @apply relative rounded-full p-1.5 bg-card shadow-lg;
+    box-shadow: 
+      0 0 0 3px hsl(var(--primary) / 0.2),
+      0 10px 40px -10px hsl(var(--foreground) / 0.15);
   }
 
   .link-button {
-    @apply w-full py-4 px-6 rounded-lg border flex items-center justify-between transition-all duration-300;
-    background-color: hsl(var(--link-bg));
+    @apply w-full py-4 px-6 rounded-xl border-2 flex items-center justify-between transition-all duration-300 bg-card;
     border-color: hsl(var(--link-border));
+    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.04);
   }
 
   .link-button:hover {
     background-color: hsl(var(--link-hover-bg));
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px hsla(var(--foreground), 0.08);
+    border-color: hsl(var(--link-hover-border));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px hsl(var(--primary) / 0.15);
+  }
+
+  .link-button:active {
+    transform: translateY(-1px);
   }
 
   .social-icon {
-    @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300;
+    @apply w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300;
+    background-color: hsl(var(--icon-bg));
     color: hsl(var(--icon-color));
+    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.06);
   }
 
   .social-icon:hover {
-    background-color: hsl(var(--secondary));
-    color: hsl(var(--primary));
-    transform: scale(1.1);
+    background-color: hsl(var(--icon-hover-bg));
+    color: hsl(var(--primary-foreground));
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px hsl(var(--primary) / 0.25);
+  }
+
+  .social-icon:active {
+    transform: translateY(0) scale(1);
   }
 }
 
 @layer utilities {
   .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 0.7s ease-out forwards;
   }
 
   .animation-delay-100 { animation-delay: 0.1s; }
@@ -136,12 +158,13 @@
   .animation-delay-300 { animation-delay: 0.3s; }
   .animation-delay-400 { animation-delay: 0.4s; }
   .animation-delay-500 { animation-delay: 0.5s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
