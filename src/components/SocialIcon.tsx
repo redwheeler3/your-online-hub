@@ -1,12 +1,10 @@
-import { LucideIcon } from "lucide-react";
-
 interface SocialIconProps {
   href: string;
-  icon: LucideIcon;
+  icon: React.ReactNode;
   label: string;
 }
 
-const SocialIcon = ({ href, icon: Icon, label }: SocialIconProps) => {
+const SocialIcon = ({ href, icon, label }: SocialIconProps) => {
   return (
     <a
       href={href}
@@ -15,7 +13,7 @@ const SocialIcon = ({ href, icon: Icon, label }: SocialIconProps) => {
       aria-label={label}
       className="social-icon"
     >
-      <Icon size={20} />
+      {icon}
     </a>
   );
 };

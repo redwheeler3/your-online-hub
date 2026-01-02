@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface LinkButtonProps {
   href: string;
@@ -12,11 +12,14 @@ const LinkButton = ({ href, label, delay = 0 }: LinkButtonProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="link-button opacity-0 animate-fade-in-up"
+      className="link-button opacity-0 animate-fade-in-up group"
       style={{ animationDelay: `${delay}ms` }}
     >
       <span className="font-medium text-foreground">{label}</span>
-      <ChevronRight size={20} className="text-muted-foreground" />
+      <ArrowRight 
+        size={18} 
+        className="text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary" 
+      />
     </a>
   );
 };
