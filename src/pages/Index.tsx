@@ -53,17 +53,17 @@ const Index = () => {
         {/* Social Icons */}
         <div className="flex items-center gap-3 mt-5 opacity-0 animate-fade-in-up animation-delay-200">
           <SocialIcon
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/jefforiecuia/"
             icon={<LinkedInIcon />}
             label="LinkedIn"
           />
           <SocialIcon
-            href="https://facebook.com"
+            href="https://www.facebook.com/redwheeler"
             icon={<FacebookIcon />}
             label="Facebook"
           />
           <SocialIcon
-            href="mailto:contact@example.com"
+            href="mailto:contact@jeffo.net"
             icon={<EmailIcon />}
             label="Email"
           />
