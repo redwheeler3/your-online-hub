@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 interface SocialIconProps {
   href: string;
   icon: React.ReactNode;
@@ -5,6 +11,16 @@ interface SocialIconProps {
 }
 
 const SocialIcon = ({ href, icon, label }: SocialIconProps) => {
+  const handleClick = () => {
+    if (window.gtag) {
+      window.gtag('event', 'click', {
+        event_category: 'outbound_link',
+        event_label: label,
+        transport_type: 'beacon',
+      });
+    }
+  };
+
   return (
     <a
       href={href}
@@ -12,6 +28,7 @@ const SocialIcon = ({ href, icon, label }: SocialIconProps) => {
       rel="noopener noreferrer"
       aria-label={label}
       className="social-icon"
+      onClick={handleClick}
     >
       {icon}
     </a>
