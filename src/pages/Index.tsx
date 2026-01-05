@@ -35,7 +35,7 @@ const Index = () => {
     },
     {
       label: "Amazon EventBridge Pipes Workshop",
-      href: "https://catalog.us-east-1.prod.workshops.aws/workshops/1a9c2258-203d-4035-b516-16a14577c54d/en-US",
+      href: "https://catalog.workshops.aws/eb-pipes",
     },
   ];
 
