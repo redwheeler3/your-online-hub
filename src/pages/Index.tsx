@@ -86,6 +86,18 @@ const Index = () => {
             always happy to connect, whether it's about work or speaking
             opportunities, co-op living, or getting your website up and running.
           </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Lately I'm having a blast creating{" "}
+            <a
+              href="https://music.jeffo.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground underline underline-offset-2 hover:text-primary transition-colors"
+            >
+              AI-generated music
+            </a>
+            —though it skews pretty heavily into songs about Pipes.
+          </p>
         </div>
 
         {/* Links */}
