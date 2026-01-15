@@ -83,8 +83,8 @@ const Index = () => {
             snowboarding, sailing, and exploring new places. I love speaking to
             audiences on behalf of AWS and on my own. Check out the hands-on
             workshop for Pipes I created and then presented at re:Invent 3 years
-            in a row. Lately I'm having a blast creating AI music, though it
-            skews pretty heavily into songs about Pipes.
+            in a row. Lately I've been "creating" AI music, though it skews
+            pretty heavily into songs about Pipes.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             I live in a housing co-op, where I built our community website. I'm
