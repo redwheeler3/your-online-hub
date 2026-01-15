@@ -37,6 +37,10 @@ const Index = () => {
       label: "Amazon EventBridge Pipes Workshop",
       href: "https://catalog.workshops.aws/eb-pipes",
     },
+    {
+      label: "Unsanctioned Songs About Pipes",
+      href: "https://music.jeffo.net/",
+    },
   ];
 
   return (
@@ -79,24 +83,13 @@ const Index = () => {
             snowboarding, sailing, and exploring new places. I love speaking to
             audiences on behalf of AWS and on my own. Check out the hands-on
             workshop for Pipes I created and then presented at re:Invent 3 years
-            in a row.
+            in a row. Lately I'm having a blast creating AI music, though it
+            skews pretty heavily into songs about Pipes.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             I live in a housing co-op, where I built our community website. I'm
             always happy to connect, whether it's about work or speaking
             opportunities, co-op living, or getting your website up and running.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Lately I'm having a blast creating{" "}
-            <a
-              href="https://music.jeffo.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground underline underline-offset-2 hover:text-primary transition-colors"
-            >
-              AI-generated music
-            </a>
-            —though it skews pretty heavily into songs about Pipes.
           </p>
         </div>
 
