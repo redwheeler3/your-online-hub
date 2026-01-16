@@ -87,7 +87,9 @@ const Index = () => {
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Lately I've been "creating" AI music, though it skews pretty heavily
-            into songs about Pipes and other AWS stuff.
+            into songs about Pipes and other AWS stuff. Every time I listen to
+            it, I'm amazed at how far the technology has progressed. Feel free
+            to give it a listen yourself!
           </p>
           <p className="text-muted-foreground leading-relaxed">
             I live in a housing co-op, where I built our community website. I'm
