@@ -27,7 +27,7 @@ const Index = () => {
   const links = [
     {
       label: "My Resume",
-      href: "https://drive.google.com/file/d/0B2Ng6aKKisxmaW5NdGVsS2oxdFE/view?usp=drive_link&resourcekey=0-Q-zPz9Khy8cTSC9OpdBdqQ",
+      href: "https://resume.jeffo.net",
     },
     {
       label: "Penta Housing Co-op Website",
