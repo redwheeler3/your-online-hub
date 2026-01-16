@@ -21,8 +21,7 @@ const LinkButton = ({ href, label, delay = 0 }: LinkButtonProps) => {
       // ignore malformed URLs
     }
 
-    // Explicitly track clicks (GA4 Enhanced Measurement only auto-tracks *outbound* clicks).
-    gtag("event", "jeffo_link_click", {
+    gtag("event", "link_click", {
       link_url: href,
       link_text: label,
       link_domain: linkDomain,
