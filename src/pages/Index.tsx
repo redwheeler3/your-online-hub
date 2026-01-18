@@ -79,11 +79,11 @@ const Index = () => {
             Nice to meet you!
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I'm a Senior Technical Product Manager at AWS with a love for
+            I'm a Senior Technical Product Manager at Amazon with a love for
             snowboarding, sailing, and exploring new places. I love speaking to
             audiences on behalf of AWS and on my own. Check out the hands-on
-            workshop for Pipes I created and then presented at re:Invent 3 years
-            in a row.
+            workshop for Amazon EventBridge Pipes I created and then presented
+            at re:Invent 3 years in a row.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Lately I've been "creating" AI music, though it skews pretty heavily
