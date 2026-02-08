@@ -80,7 +80,7 @@ const Index = () => {
           </p>
           <p className="text-muted-foreground leading-relaxed">
             I'm a Senior Technical Product Manager at Amazon with a love for
-            snowboarding, sailing, and exploring new places. I love speaking to
+            snowboarding, sailing, and exploring new places. I enjoy speaking to
             audiences on behalf of AWS and on my own. Check out the hands-on
             workshop for Amazon EventBridge Pipes I created and then presented
             at re:Invent 3 years in a row.
