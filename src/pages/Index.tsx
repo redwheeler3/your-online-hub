@@ -83,7 +83,7 @@ const Index = () => {
             snowboarding, sailing, and exploring new places. I enjoy public
             speaking and have run interactive demos, given presentations, and
             served on panels. Check out the hands-on
-            workshop for Amazon EventBridge Pipes I created and then presented
+            workshop for Amazon EventBridge Pipes that I created and presented
             at re:Invent 3 years in a row.
           </p>
           <p className="text-muted-foreground leading-relaxed">
@@ -93,7 +93,7 @@ const Index = () => {
             to give it a listen yourself!
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I live in a housing co-op, where I built our community website. I'm
+            I live in a housing co-op and built our community website. I'm
             always happy to connect, whether it's about work or speaking
             opportunities, co-op living, or getting your website up and running.
           </p>
